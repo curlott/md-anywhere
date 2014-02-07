@@ -63,6 +63,11 @@ function init() {
 
     chrome.runtime.getBackgroundPage(function(bgPage) {
       bg = bgPage;
+      if(bg.appWindow.launchData.items) {
+        if(bg.appWindow.launchData.items[0]) {
+          openFile(bg.appWindow.launchData.items[0].entry);
+        }
+      }   
     });
   });
 }
