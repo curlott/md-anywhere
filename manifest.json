@@ -7,6 +7,12 @@
       "scripts": ["background.js"]
     }
   },
+  "file_handlers": {
+      "text": {
+          "types": ["*"],
+          "title": "md everywhere"
+      }
+  },
   "permissions": [
     {"fileSystem": ["write"]},
     "storage"
