@@ -12,6 +12,9 @@ chrome.app.runtime.onLaunched.addListener(function() {
       height: o.height || 500
     }, function(app) {
       appWindow = app;
+      appWindow.contentWindow.addEventListener('load', function(e) {
+          appWindow.launchData = launchData;
+      });
     });
   });
 });
