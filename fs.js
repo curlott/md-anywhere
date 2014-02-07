@@ -41,7 +41,7 @@ define(function(require, exports, module) {
       element.ondragenter = cancel;
       element.ondrop = function(e) {
         cancel(e);
-        callback(e.dataTransfer.items[0].webkitGetAsEntry());
+        callback(e.dataTransfer.items[1].webkitGetAsEntry());
       };
     },
 
